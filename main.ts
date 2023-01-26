@@ -1,4 +1,46 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite2 = sprites.create(img`
+        1 1 1 1 . . . . . . . . 1 1 1 1 
+        1 2 2 1 1 . . . . . . 1 1 2 2 1 
+        1 2 2 2 1 . . . . . . 1 2 2 2 1 
+        1 2 2 2 2 1 . . . . 1 2 2 2 2 1 
+        . 1 2 2 2 2 1 . . 1 2 2 2 2 1 . 
+        . . 1 2 2 2 2 1 1 2 2 2 2 1 . . 
+        . . . 1 2 2 2 2 2 2 2 2 1 . . . 
+        . . . . 1 2 2 2 2 2 2 1 . . . . 
+        . . . . 1 2 2 2 2 2 2 1 . . . . 
+        . . . 1 2 2 2 2 2 2 2 2 1 . . . 
+        . . 1 2 2 2 2 1 1 2 2 2 2 1 . . 
+        . 1 2 2 2 2 1 . . 1 2 2 2 2 1 . 
+        1 2 2 2 2 1 . . . . 1 2 2 2 2 1 
+        1 2 2 2 1 . . . . . . 1 2 2 2 1 
+        1 2 2 1 1 . . . . . . 1 1 2 2 1 
+        1 1 1 1 . . . . . . . . 1 1 1 1 
+        `, SpriteKind.Player)
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite = sprites.create(img`
+        . . . . 1 1 1 1 1 1 1 1 . . . . 
+        . . . 1 3 3 3 3 3 3 3 3 1 . . . 
+        . . 1 3 3 3 3 3 3 3 3 3 3 1 . . 
+        . 1 3 3 3 3 3 3 3 3 3 3 3 3 1 . 
+        . 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+        . 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+        . 1 3 3 3 3 3 3 3 3 3 3 3 3 1 . 
+        . . 1 3 3 3 3 3 3 3 3 3 3 1 . . 
+        . . . 1 3 3 3 3 3 3 3 3 1 . . . 
+        . . . . 1 1 1 1 1 1 1 1 . . . . 
+        `, SpriteKind.Player)
+})
 // Don't forget to comment your code as you work!
+let mySprite2: Sprite = null
+let mySprite: Sprite = null
 scene.setBackgroundColor(11)
 scene.setBackgroundImage(img`
     ................................................................................................................................................................
@@ -122,7 +164,7 @@ scene.setBackgroundImage(img`
     ................................................................................................................................................................
     ................................................................................................................................................................
     `)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . 1 3 3 3 3 3 3 3 3 3 3 1 . . 
@@ -140,7 +182,7 @@ let mySprite = sprites.create(img`
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     `, SpriteKind.Player)
-let mySprite2 = sprites.create(img`
+mySprite2 = sprites.create(img`
     1 1 1 1 . . . . . . . . 1 1 1 1 
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 2 2 2 1 . . . . . . 1 2 2 2 1 
@@ -158,4 +200,4 @@ let mySprite2 = sprites.create(img`
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 1 1 1 . . . . . . . . 1 1 1 1 
     `, SpriteKind.Player)
-let askPlayers = game.askForString("Would you want to be O or X?")
+let input2 = game.askForString("Would you want to be x or O?", 1)
