@@ -1,3 +1,4 @@
+// Don't forget to comment your code as you work!
 scene.setBackgroundColor(11)
 scene.setBackgroundImage(img`
     ..............................................fff......................................................fff......................................................
@@ -121,7 +122,7 @@ scene.setBackgroundImage(img`
     ..............................................fff......................................................fff......................................................
     ..............................................fff......................................................fff......................................................
     `)
-let player1 = sprites.create(img`
+let mySprite = sprites.create(img`
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . 1 3 3 3 3 3 3 3 3 3 3 1 . . 
@@ -139,7 +140,7 @@ let player1 = sprites.create(img`
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     `, SpriteKind.Player)
-let player2 = sprites.create(img`
+let mySprite2 = sprites.create(img`
     1 1 1 1 . . . . . . . . 1 1 1 1 
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 2 2 2 1 . . . . . . 1 2 2 2 1 
@@ -157,4 +158,3 @@ let player2 = sprites.create(img`
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 1 1 1 . . . . . . . . 1 1 1 1 
     `, SpriteKind.Player)
-let askPlayers = game.askForString("Would you want to be O or X?", 1)
