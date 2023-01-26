@@ -158,3 +158,4 @@ let mySprite2 = sprites.create(img`
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 1 1 1 . . . . . . . . 1 1 1 1 
     `, SpriteKind.Player)
+let askPlayers = game.askForString("Would you want to be O or X?")
