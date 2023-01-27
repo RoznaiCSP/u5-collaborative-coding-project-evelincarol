@@ -1,4 +1,9 @@
+function input2 (mySprite: Sprite) {
+    controller.moveSprite(mySprite)
+    return mySprite
+}
 // Don't forget to comment your code as you work!
+let mySprite: Sprite = null
 scene.setBackgroundColor(11)
 scene.setBackgroundImage(img`
     ..............................................fff......................................................fff......................................................
@@ -122,7 +127,7 @@ scene.setBackgroundImage(img`
     ..............................................fff......................................................fff......................................................
     ..............................................fff......................................................fff......................................................
     `)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . 1 3 3 3 3 3 3 3 3 3 3 1 . . 
@@ -158,3 +163,5 @@ let mySprite2 = sprites.create(img`
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 1 1 1 . . . . . . . . 1 1 1 1 
     `, SpriteKind.Player)
+input2(mySprite)
+controller.player2.moveSprite(mySprite2)
