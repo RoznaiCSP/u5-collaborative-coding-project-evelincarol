@@ -2,15 +2,13 @@
     "name": "U5 Collaborative Coding Project",
     "description": "",
     "dependencies": {
-        "device": "*",
-        "extension": "pkg:extension.json"
+        "device": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json",
-        "extension.json"
+        "assets.json"
     ],
     "testFiles": [
         "test.ts"
