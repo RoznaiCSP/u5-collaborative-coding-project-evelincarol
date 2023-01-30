@@ -1,8 +1,20 @@
+controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+    lockmove(mySprite2)
+})
 function input2 (mySprite: Sprite) {
     controller.moveSprite(mySprite)
     return mySprite
 }
+controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+    lockmove(mySprite)
+})
+function lockmove (playerSprite: Sprite) {
+    mySprite3 = sprites.create(playerSprite.image.clone(), SpriteKind.Player)
+    mySprite3.setPosition(playerSprite.x, playerSprite.y)
+}
 // Don't forget to comment your code as you work!
+let mySprite3: Sprite = null
+let mySprite2: Sprite = null
 let mySprite: Sprite = null
 scene.setBackgroundColor(11)
 scene.setBackgroundImage(img`
@@ -145,7 +157,7 @@ mySprite = sprites.create(img`
     . . . 1 3 3 3 3 3 3 3 3 1 . . . 
     . . . . 1 1 1 1 1 1 1 1 . . . . 
     `, SpriteKind.Player)
-let mySprite2 = sprites.create(img`
+mySprite2 = sprites.create(img`
     1 1 1 1 . . . . . . . . 1 1 1 1 
     1 2 2 1 1 . . . . . . 1 1 2 2 1 
     1 2 2 2 1 . . . . . . 1 2 2 2 1 
